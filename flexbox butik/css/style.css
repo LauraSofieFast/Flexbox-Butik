@@ -1,0 +1,62 @@
+/**
+ * projekt: Flexbox tutorial
+ * fil: css/style.css
+ **/
+
+/* Google fonts (NB: load før :root) */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baumans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+/* font-family: 'Luckiest Guy', cursive; */
+
+/* Variabler: genbruges og gør designvalg enkle */
+:root {
+  /* farver */
+  --blue: #10335e;
+  --white: #ffffff;
+  --red: #bf2e2e;
+  --black: #000;
+
+  /* fonte */
+  --font: 'Nanum Myeongjo', serif; /* brødtekst */
+  --displayH: 'Baumans', cursive; /* overskrifter */
+
+  /* teksturer ("fliselagte baggrunde") */
+    --woodtexture: url('../images/brunbg.jpg');
+}
+header {
+  text-align: center;
+}
+
+h1 {
+  border-bottom: 5px solid var(--black);
+  text-align: center;
+}
+/* Her bruges en variabel: --blue */
+body {
+  background-image: var(--woodtexture);
+  font-family: var(--font);
+}
+
+/* Typografi */
+h1 {
+  font-family: var(--displayH);
+}
+
+#content {
+  display: flex;
+}
+/* Layout: Flexbox */
+aside {
+  width: 50%;
+}
+main {
+  display:flex;
+  width: 50%
+  border: solid 1px black;
+  margin: 30px
+}
+.produkter {
+  border: 4px solid black; margin-left: 4px;
+  padding: 15px
+}
